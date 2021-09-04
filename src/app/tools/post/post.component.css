@@ -1,0 +1,23 @@
+.action-item {
+    margin-left: .5em;
+    cursor: pointer;
+}
+
+.liked{
+    background-color: blue;
+}
+
+.not-liked{
+    background-color: white;
+    
+}
+
+.disliked{
+    background-color: red;
+}
+
+.not-disliked{
+    background-color: white;
+    
+}
+

@@ -1,0 +1,32 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Upload Image</mat-card-title>
+        <!-- <mat-card-subtitle>{{creatorDescription}}</mat-card-subtitle> -->
+    </mat-card-header>
+    <div>
+        <textarea #commentInput placeholder="Author's Name"></textarea>
+    </div>
+
+    <div *ngIf="selectedImageFile" id="post-preview">
+        <img id="post-preview-image" />
+    </div>
+    <!-- <img mat-card-image src="{{postData?.imageUrl}}">
+    <mat-card-content>
+        {{postData?.comment}}
+    </mat-card-content> -->
+    <mat-card-actions align="end">
+        <button mat-button color="warn">
+            <label for="photo-upload">
+                <input #photoSelector (change)="onPhotoSelected(photoSelector)"
+                id="photo-upload" type="file" accept="image/*" />
+                <mat-icon>insert_photo</mat-icon>
+            </label>
+        </button>
+        <button (click)="onUploadClick(commentInput)" mat-flat-button color="warn">Upload</button>
+        <!-- <mat-icon (click)="onReplyClick()" class="action-item" color="warn">chat_bubble_outline</mat-icon>
+        <mat-icon class="action-item" color="warn">favorite_border</mat-icon>
+        <mat-icon class="action-item" color="warn">save</mat-icon> -->
+    </mat-card-actions>
+</mat-card>
+
+<!-- #photoSelector (change)="onPhotoSelected(photoSelector)" -->
